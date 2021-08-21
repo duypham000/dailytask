@@ -1,0 +1,83 @@
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html,
+body,
+.wrapper {
+  width: 100%;
+  height: 100%; }
+
+html,
+body {
+  overflow-x: hidden; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+.cards {
+  margin: auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow: hidden;
+  height: 80%;
+  margin-top: 5%;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .cards__item {
+    padding: 5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 5rem;
+    -webkit-transition: -webkit-box-flex 0.7s ease-in;
+    transition: -webkit-box-flex 0.7s ease-in;
+    transition: flex 0.7s ease-in;
+    transition: flex 0.7s ease-in, -webkit-box-flex 0.7s ease-in, -ms-flex 0.7s ease-in;
+    position: relative;
+    margin-left: 1rem;
+    -webkit-box-flex: 0.5;
+    -ms-flex: 0.5;
+    flex: 0.5; }
+    .cards__item:first-child {
+      margin-left: -1rem;
+      background-image: url("/images/noel.jpg"); }
+    .cards__item:nth-child(2) {
+      background-image: url("/images/amber.jpg"); }
+    .cards__item:nth-child(3) {
+      background-image: url("/images/ayaya.png"); }
+    .cards__item:nth-child(4) {
+      background-image: url("/images/eula.jpg"); }
+    .cards__item:last-child {
+      background-image: url("/images/kq.jpg"); }
+    .cards__item h2 {
+      opacity: 0;
+      margin-top: calc(100% - 20rem);
+      font-size: 5rem;
+      color: wheat;
+      font-weight: 800;
+      position: absolute; }
+  .cards .active {
+    -webkit-box-flex: 5;
+    -ms-flex: 5;
+    flex: 5; }
+    .cards .active h2 {
+      opacity: 1; }
