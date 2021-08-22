@@ -1,7 +1,7 @@
 {
-  "name": "card",
+  "name": "the-great-sea",
   "version": "1.0.0",
-  "description": "day 1",
+  "description": "clone https://dribbble.com/shots/16124838-The-Great-Sea-x-C4d",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
