@@ -1,1 +1,0 @@
-"use strict";$(document).ready(function(){show(),bd.addEventListener("scroll",show)});var eles=document.getElementsByClassName("ctn"),bd=document.getElementsByClassName("home-page")[0];function show(){for(var e=window.innerHeight/5*4,s=0;s<eles.length;s++){var t=eles[s];t.getBoundingClientRect().top<e?t.classList.add("show"):t.classList.remove("show")}}
