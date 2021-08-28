@@ -21,19 +21,19 @@
 
     &:first-child {
       margin-left: -1rem;
-      background-image: url("/images/noel.jpg");
+      background-image: url("../images/noel.jpg");
     }
     &:nth-child(2) {
-      background-image: url("/images/amber.jpg");
+      background-image: url("../images/amber.jpg");
     }
     &:nth-child(3) {
-      background-image: url("/images/ayaya.png");
+      background-image: url("../images/ayaya.png");
     }
     &:nth-child(4) {
-      background-image: url("/images/eula.jpg");
+      background-image: url("../images/eula.jpg");
     }
     &:last-child {
-      background-image: url("/images/kq.jpg");
+      background-image: url("../images/kq.jpg");
     }
 
     h2 {
