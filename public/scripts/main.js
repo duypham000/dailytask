@@ -1,1 +1,0 @@
-"use strict";$(document).ready(function(){btn.addEventListener("click",function(){active?inpt.classList.remove("active"):inpt.classList.add("active"),active=!active})});var active=!0,inpt=document.querySelector(".searchBar > input"),btn=document.querySelector(".searchBar > .btn");
