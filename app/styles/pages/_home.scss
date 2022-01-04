@@ -1,0 +1,169 @@
+$d-green: #00474b;
+$l-green: #f3f8fb;
+$danger: #d46f65;
+$while: #fafafa;
+
+$btn-dsb-bg: #0d686d;
+$btn-actv-bg: #9fe8df;
+
+$inpt-bor: #5aaaa1;
+
+$tit-text: #54696a;
+
+.home-page {
+  background-color: #c5e4e7;
+}
+
+.container {
+  background-color: $while;
+  border-radius: 2rem;
+  width: 92rem;
+  padding: 3rem;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  .caculator {
+    display: grid;
+    grid-template-columns: calc(50% - 4rem) calc(50% - 4rem);
+    grid-gap: 8rem;
+
+    &__key {
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        font-size: 1.3rem;
+        font-weight: 750;
+        color: $d-green;
+        margin-bottom: 1.3rem;
+      }
+
+      &-input {
+        .input-group {
+          height: 5rem;
+          border-radius: 1.5rem;
+          .input-group-prepend .input-group-text {
+            background-color: $l-green;
+            border: none;
+            color: $d-green;
+            font-size: 2rem;
+          }
+          input {
+            background-color: $l-green;
+            border: none;
+            text-align: right;
+            color: $d-green;
+            height: 100%;
+            font-size: 2rem;
+            font-weight: 700;
+
+            &:focus {
+              box-shadow: none;
+              border: none;
+            }
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+        }
+
+        .active {
+          .input-group-prepend .input-group-text {
+            border: 3px solid $inpt-bor;
+            border-right: none;
+          }
+
+          input {
+            border: 3px solid $inpt-bor;
+            border-left: none;
+
+            &:focus {
+              border: 3px solid $inpt-bor;
+              border-left: none;
+            }
+          }
+        }
+
+        .danger {
+          .input-group-prepend .input-group-text {
+            border: 3px solid $danger;
+            border-right: none;
+          }
+
+          input {
+            border: 3px solid $danger;
+            border-left: none;
+
+            &:focus {
+              border: 3px solid $danger;
+              border-left: none;
+            }
+          }
+        }
+      }
+
+      &-btn_grp {
+        margin: 4rem 0;
+        .title {
+          margin-bottom: 2rem;
+        }
+
+        .btn_grp {
+          display: grid;
+          grid-template-columns: 12rem 12rem 12rem;
+          grid-template-rows: 5rem 5rem;
+          grid-gap: 1.5rem;
+          &-items {
+            background-color: $d-green;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: $while;
+            cursor: pointer;
+            user-select: none;
+
+            &:hover {
+              background-color: $btn-actv-bg;
+              color: $d-green;
+            }
+          }
+
+          .active {
+            background-color: $btn-actv-bg;
+            color: $d-green;
+          }
+
+          &-cus {
+            background-color: transparent;
+            input {
+              background-color: $l-green;
+              border-radius: 1rem;
+              border: none;
+              text-align: right;
+              color: $d-green;
+              height: 100%;
+              font-size: 2rem;
+              font-weight: 700;
+
+              &:focus {
+                box-shadow: none;
+                border: 3px solid $inpt-bor;
+              }
+              &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+              }
+              &::placeholder {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
