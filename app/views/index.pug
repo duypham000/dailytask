@@ -5,4 +5,48 @@ block vars
 	-bodyClass = 'home-page'
 
 block container
-	
+	.container 
+		.caculator 
+			.caculator__key 
+				.form-group.caculator__key-input
+					label.title(for="bill") Bill
+					.input-group.mb-3
+						.input-group-prepend
+							span.input-group-text $
+						input.form-control#bill(type="text")
+			
+				.caculator__key-btn_grp
+					label.title Select Tip %
+					.btn_grp
+						.btn_grp-items 5%
+						.btn_grp-items 10%
+						.btn_grp-items 15%
+						.btn_grp-items 20%
+						.btn_grp-items 25%
+						.btn_grp-items.active
+							input.form-control(type="text", aria-label="custom")
+
+				.form-group.caculator__key-input
+					label.title(for="people") People
+					.input-group.mb-3
+						.input-group-prepend
+							span.input-group-text 
+								i.fas.fa-user
+						input.form-control#people(type="text")
+			
+			.caculator__scrn
+				.caculator_scrn-grp 
+					.caculator_scrn-grp--title 
+						h4 Tip Amount
+						span /person
+					.caculator_scrn-grp--display $0.00
+
+			.caculator__scrn
+				.caculator_scrn-grp 
+					.caculator_scrn-grp--title 
+						h4 Total
+						span /person
+					.caculator_scrn-grp--display $0.00
+
+
+
