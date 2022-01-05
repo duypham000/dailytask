@@ -10,7 +10,7 @@ block container
 			.caculator__key 
 				.form-group.caculator__key-input
 					label.title(for="bill") Bill
-					.input-group.mb-3.active
+					.input-group.mb-3
 						.input-group-prepend
 							span.input-group-text $
 						input.form-control#bill(type="number" placeholder="0")
@@ -18,15 +18,15 @@ block container
 				.caculator__key-btn_grp
 					label.title Select Tip %
 					.btn_grp
-						.btn_grp-items 5%
-						.btn_grp-items 10%
-						.btn_grp-items.active 15%
-						.btn_grp-items 20%
-						.btn_grp-items 25%
-						.btn_grp-items.btn_grp-cus.active
+						.btn_grp-items(value="5") 5%
+						.btn_grp-items(value="10") 10%
+						.btn_grp-items(value="15") 15%
+						.btn_grp-items(value="20") 20%
+						.btn_grp-items(value="25") 25%
+						.btn_grp-items.btn_grp-cus
 							input.form-control(type="number", placeholder="Custom")
 
-				.form-group.caculator__key-input.danger
+				.form-group.caculator__key-input
 					label.title(for="people") Number of People
 						span Can't be zero
 					.input-group.mb-3
@@ -48,4 +48,4 @@ block container
 						span /person
 					.caculator__scrn-grp--display $0.00
 
-				.caculator__scrn-btn.active reset
+				.caculator__scrn-btn reset

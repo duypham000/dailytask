@@ -37,6 +37,9 @@ $tit-text: #61989b;
         color: $d-green;
         margin-bottom: 1.3rem;
         display: flex;
+        span {
+          display: none;
+        }
       }
 
       &-input {
@@ -92,6 +95,9 @@ $tit-text: #61989b;
       }
 
       .danger {
+        .title span {
+          display: block;
+        }
         .input-group {
           .input-group-prepend .input-group-text {
             border: 3px solid $danger;
@@ -230,15 +236,14 @@ $tit-text: #61989b;
         font-size: 2.5rem;
         text-transform: uppercase;
         user-select: none;
-        cursor: pointer;
-
-        &:hover {
-          background-color: $btn-actv-bg;
-        }
+        cursor: none;
+        pointer-events: none;
       }
 
       .active {
         background-color: $btn-actv-bg;
+        cursor: pointer;
+        pointer-events: all;
       }
     }
   }
