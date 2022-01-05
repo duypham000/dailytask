@@ -8,7 +8,7 @@ $btn-actv-bg: #9fe8df;
 
 $inpt-bor: #5aaaa1;
 
-$tit-text: #54696a;
+$tit-text: #61989b;
 
 .home-page {
   background-color: #c5e4e7;
@@ -36,12 +36,14 @@ $tit-text: #54696a;
         font-weight: 750;
         color: $d-green;
         margin-bottom: 1.3rem;
+        display: flex;
       }
 
       &-input {
         .input-group {
           height: 5rem;
           border-radius: 1.5rem;
+          display: flex;
           .input-group-prepend .input-group-text {
             background-color: $l-green;
             border: none;
@@ -49,6 +51,8 @@ $tit-text: #54696a;
             font-size: 2rem;
           }
           input {
+            cursor: pointer;
+
             background-color: $l-green;
             border: none;
             text-align: right;
@@ -77,6 +81,7 @@ $tit-text: #54696a;
           input {
             border: 3px solid $inpt-bor;
             border-left: none;
+            cursor: text;
 
             &:focus {
               border: 3px solid $inpt-bor;
@@ -84,8 +89,10 @@ $tit-text: #54696a;
             }
           }
         }
+      }
 
-        .danger {
+      .danger {
+        .input-group {
           .input-group-prepend .input-group-text {
             border: 3px solid $danger;
             border-right: none;
@@ -94,12 +101,18 @@ $tit-text: #54696a;
           input {
             border: 3px solid $danger;
             border-left: none;
+            cursor: text;
 
             &:focus {
               border: 3px solid $danger;
               border-left: none;
             }
           }
+        }
+
+        .title span {
+          margin-left: auto;
+          color: $danger;
         }
       }
 
@@ -135,6 +148,9 @@ $tit-text: #54696a;
           .active {
             background-color: $btn-actv-bg;
             color: $d-green;
+            input {
+              background-color: $btn-actv-bg;
+            }
           }
 
           &-cus {
@@ -148,8 +164,10 @@ $tit-text: #54696a;
               height: 100%;
               font-size: 2rem;
               font-weight: 700;
+              cursor: pointer;
 
               &:focus {
+                cursor: text;
                 box-shadow: none;
                 border: 3px solid $inpt-bor;
               }
@@ -163,6 +181,64 @@ $tit-text: #54696a;
             }
           }
         }
+      }
+    }
+
+    &__scrn {
+      background-color: $d-green;
+      border-radius: 2rem;
+      padding: 4rem;
+      padding-top: 5rem;
+      display: flex;
+      flex-direction: column;
+
+      &-grp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 6rem;
+
+        &--title {
+          h4 {
+            color: $while;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+          }
+          span {
+            color: $tit-text;
+            font-weight: 800;
+          }
+        }
+
+        &--display {
+          font-size: 3rem;
+          font-weight: 700;
+          color: $btn-actv-bg;
+        }
+      }
+
+      &-btn {
+        margin-top: auto;
+        height: 5rem;
+        background-color: $btn-dsb-bg;
+        color: $d-green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        user-select: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $btn-actv-bg;
+        }
+      }
+
+      .active {
+        background-color: $btn-actv-bg;
       }
     }
   }

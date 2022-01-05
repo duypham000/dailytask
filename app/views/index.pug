@@ -26,25 +26,26 @@ block container
 						.btn_grp-items.btn_grp-cus.active
 							input.form-control(type="number", placeholder="Custom")
 
-				.form-group.caculator__key-input
+				.form-group.caculator__key-input.danger
 					label.title(for="people") Number of People
-					.input-group.mb-3.danger
+						span Can't be zero
+					.input-group.mb-3
 						.input-group-prepend
 							span.input-group-text 
 								i.fas.fa-user
 						input.form-control#people(type="number" placeholder="0")
 			
 			.caculator__scrn
-				.caculator_scrn-grp 
-					.caculator_scrn-grp--title 
+				.caculator__scrn-grp 
+					.caculator__scrn-grp--title 
 						h4 Tip Amount
 						span /person
-					.caculator_scrn-grp--display $0.00
+					.caculator__scrn-grp--display $0.00
 
-				.caculator_scrn-grp 
-					.caculator_scrn-grp--title 
+				.caculator__scrn-grp 
+					.caculator__scrn-grp--title 
 						h4 Total
 						span /person
-					.caculator_scrn-grp--display $0.00
+					.caculator__scrn-grp--display $0.00
 
-				.caculator_scrn-btn reset
+				.caculator__scrn-btn.active reset
