@@ -7,11 +7,11 @@ html,
 body,
 .wrapper {
   width: 100%;
-  height: 100%; }
-
-html,
-body {
+  height: 100%;
   overflow-x: hidden; }
+
+::-webkit-scrollbar {
+  display: none; }
 
 *,
 *:before,
@@ -36,7 +36,7 @@ a {
 .btn {
   padding: 1.2rem 3.2rem;
   font-weight: 800;
-  color: #ffdbd1;
+  color: #eaeaff;
   cursor: pointer;
   font-size: 1.2rem; }
   .btn-filled {
@@ -118,7 +118,7 @@ a {
           margin-right: 3rem;
           height: 100%; }
           .wrapper .header__navMenu_menu-items > a {
-            color: #ffdbd1; }
+            color: #eaeaff; }
           .wrapper .header__navMenu_menu-items ul {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -166,7 +166,7 @@ a {
         text-align: center;
         font-size: 1.8rem;
         font-weight: 400;
-        color: #ffdbd1; }
+        color: #eaeaff; }
       .wrapper .header__banner-option {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -191,3 +191,105 @@ a {
       font-size: 3rem;
       text-align: center;
       font-weight: 600; }
+    .wrapper .body__future-ctn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      .wrapper .body__future-ctn--desc {
+        margin-top: 8rem;
+        width: 57%;
+        padding-left: 16rem;
+        padding-right: 13rem; }
+        .wrapper .body__future-ctn--desc h3 {
+          font-size: 2rem;
+          font-weight: 600; }
+        .wrapper .body__future-ctn--desc p {
+          margin-top: 3rem;
+          font-size: 1.4rem;
+          font-weight: 400;
+          margin-bottom: 8rem; }
+      .wrapper .body__future-ctn--img {
+        width: 43%;
+        -webkit-transform: scale(2) translate(15%);
+        transform: scale(2) translate(15%); }
+  .wrapper .body__state {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: 35rem;
+    padding: 0 16rem;
+    background-color: #3a3b59;
+    border-radius: 0 8rem 0 8rem;
+    margin-top: 6rem;
+    background-image: url("/images/bg-pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: -20rem -50rem; }
+    .wrapper .body__state-img, .wrapper .body__state-body {
+      width: calc(50% - 2rem); }
+    .wrapper .body__state-img {
+      -webkit-transform: translate(0, 1.5rem);
+      transform: translate(0, 1.5rem); }
+    .wrapper .body__state-body h3 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #fafafa;
+      margin-bottom: 3rem; }
+    .wrapper .body__state-body p {
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: #eaeaff; }
+  .wrapper .body__feature {
+    margin-top: 20rem;
+    padding-right: 18rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    .wrapper .body__feature-img {
+      width: 62rem; }
+      .wrapper .body__feature-img img {
+        -webkit-transform: scale(1.4) translate(-8.8rem, 0);
+        transform: scale(1.4) translate(-8.8rem, 0); }
+    .wrapper .body__feature-ctn {
+      width: 53rem; }
+      .wrapper .body__feature-ctn--prg h4 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #223d52;
+        margin-bottom: 2.5rem; }
+      .wrapper .body__feature-ctn--prg p {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #223d52; }
+      .wrapper .body__feature-ctn--prg:first-child {
+        margin-bottom: 7rem; }

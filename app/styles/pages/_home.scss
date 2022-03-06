@@ -1,9 +1,10 @@
 $color_header: #ff856e;
 $red: #ff525c;
 $white: #fafafa;
-$low_white: #ffdbd1;
+$low_white: #eaeaff;
 $black: #323337;
 $dark_blue: #223d52;
+$dark_pur: #3a3b59;
 
 a {
 	color: currentColor;
@@ -156,6 +157,96 @@ a {
 				font-size: 3rem;
 				text-align: center;
 				font-weight: 600;
+			}
+			&-ctn {
+				@include flex(center, center, row);
+				&--desc {
+					margin-top: 8rem;
+					width: 57%;
+					padding-left: 16rem;
+					padding-right: 13rem;
+					h3 {
+						font-size: 2rem;
+						font-weight: 600;
+					}
+					p {
+						margin-top: 3rem;
+						font-size: 1.4rem;
+						font-weight: 400;
+						margin-bottom: 8rem;
+					}
+				}
+				&--img {
+					width: 43%;
+					transform: scale(2) translate(15%);
+				}
+			}
+		}
+
+		&__state {
+			@include flex(center, space-between, row);
+			height: 35rem;
+			padding: 0 16rem;
+			background-color: $dark_pur;
+			border-radius: 0 8rem 0 8rem;
+			margin-top: 6rem;
+			background-image: url("/images/bg-pattern-circles.svg");
+			background-repeat: no-repeat;
+			background-size: 70%;
+			background-position: -20rem -50rem;
+			&-img,
+			&-body {
+				width: calc(50% - 2rem);
+			}
+
+			&-img {
+				transform: translate(0, 1.5rem);
+			}
+
+			&-body {
+				h3 {
+					font-size: 3rem;
+					font-weight: 600;
+					color: $white;
+					margin-bottom: 3rem;
+				}
+				p {
+					font-size: 1.4rem;
+					font-weight: 300;
+					color: $low_white;
+				}
+			}
+		}
+		&__feature {
+			margin-top: 20rem;
+			padding-right: 18rem;
+			@include flex(center, space-between, row);
+
+			&-img {
+				width: 62rem;
+				img {
+					transform: scale(1.4) translate(-8.8rem, 0);
+				}
+			}
+
+			&-ctn {
+				width: 53rem;
+				&--prg {
+					h4 {
+						font-size: 2rem;
+						font-weight: 600;
+						color: $dark_blue;
+						margin-bottom: 2.5rem;
+					}
+					p {
+						font-size: 1.2rem;
+						font-weight: 400;
+						color: $dark_blue;
+					}
+					&:first-child {
+						margin-bottom: 7rem;
+					}
+				}
 			}
 		}
 	}
