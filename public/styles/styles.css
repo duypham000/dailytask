@@ -146,7 +146,7 @@ a {
               margin-bottom: 2rem;
               width: 100%;
               font-weight: 400;
-              color: #323337; }
+              color: #24242c; }
               .wrapper .header__navMenu_menu-items ul > a:hover {
                 font-weight: 800; }
           .wrapper .header__navMenu_menu-items--active ul {
@@ -283,8 +283,8 @@ a {
     .wrapper .body__feature-ctn {
       width: 53rem; }
       .wrapper .body__feature-ctn--prg h4 {
-        font-size: 2rem;
-        font-weight: 600;
+        font-size: 2.3rem;
+        font-weight: 700;
         color: #223d52;
         margin-bottom: 2.5rem; }
       .wrapper .body__feature-ctn--prg p {
@@ -293,3 +293,48 @@ a {
         color: #223d52; }
       .wrapper .body__feature-ctn--prg:first-child {
         margin-bottom: 7rem; }
+  .wrapper .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-top: 20rem;
+    color: #fafafa;
+    background-color: #24242c;
+    height: 36rem;
+    border-radius: 0 8rem 0 0;
+    padding: 8rem 16rem 0 16rem; }
+    .wrapper .footer__col {
+      width: 25%; }
+      .wrapper .footer__col ul {
+        font-size: 1.3rem;
+        font-weight: 600;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .wrapper .footer__col ul a {
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: #bcbdc2;
+          margin-bottom: 1rem; }
+          .wrapper .footer__col ul a:first-child {
+            margin-top: 3.5rem; }

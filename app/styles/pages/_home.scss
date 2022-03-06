@@ -2,9 +2,10 @@ $color_header: #ff856e;
 $red: #ff525c;
 $white: #fafafa;
 $low_white: #eaeaff;
-$black: #323337;
+$black: #24242c;
 $dark_blue: #223d52;
 $dark_pur: #3a3b59;
+$gray: #bcbdc2;
 
 a {
 	color: currentColor;
@@ -233,8 +234,8 @@ a {
 				width: 53rem;
 				&--prg {
 					h4 {
-						font-size: 2rem;
-						font-weight: 600;
+						font-size: 2.3rem;
+						font-weight: 700;
 						color: $dark_blue;
 						margin-bottom: 2.5rem;
 					}
@@ -245,6 +246,35 @@ a {
 					}
 					&:first-child {
 						margin-bottom: 7rem;
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		@include flex(flex-start, space-between, row);
+		margin-top: 20rem;
+		color: $white;
+		background-color: $black;
+		height: 36rem;
+		border-radius: 0 8rem 0 0;
+		padding: 8rem 16rem 0 16rem;
+
+		&__col {
+			width: 25%;
+			ul {
+				font-size: 1.3rem;
+				font-weight: 600;
+				@include flex(flex-start, flex-start, column);
+
+				a {
+					font-size: 1.2rem;
+					font-weight: 400;
+					color: $gray;
+					margin-bottom: 1rem;
+					&:first-child {
+						margin-top: 3.5rem;
 					}
 				}
 			}
