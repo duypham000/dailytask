@@ -6,6 +6,7 @@ $black: #24242c;
 $dark_blue: #223d52;
 $dark_pur: #3a3b59;
 $gray: #bcbdc2;
+$pink: #ff7b86;
 
 a {
 	color: currentColor;
@@ -31,15 +32,29 @@ a {
 	cursor: pointer;
 	font-size: 1.2rem;
 
+	&:hover {
+		color: $white;
+	}
+
 	&-filled {
 		background-color: $white;
 		color: $red;
+
+		&:hover {
+			background-color: $pink;
+			transition: 0.2s linear;
+		}
 	}
+
 	&-rounded {
 		border-radius: 3rem;
 	}
 	&-bored {
 		border: 0.1rem solid $white;
+		&:hover {
+			background-color: $white;
+			color: $red;
+		}
 	}
 }
 
@@ -69,12 +84,16 @@ a {
 			transform: scale(2) translate(14%, -1%);
 		}
 		&__navMenu {
-			width: 111.2rem;
+			width: 77.2%;
 			@include flex(center, flex-start);
 			margin-top: 6rem;
 			font-size: 1.2rem;
 			font-weight: 800;
 			color: $white;
+
+			@include tablet {
+				width: 85%;
+			}
 
 			&_menu {
 				@include flex();
@@ -92,15 +111,14 @@ a {
 					}
 					ul {
 						@include flex(flex-start, center, column);
-						display: none;
 						position: absolute;
 						margin-top: 2rem;
+						display: none;
 						background-color: $white;
 						padding: 2.5rem 2rem 0.5rem 2rem;
 						border-radius: 0.5rem;
 						min-width: 17rem;
 						transform: translate(-2.5rem, 0);
-
 						& > a {
 							margin-bottom: 2rem;
 							width: 100%;
@@ -112,9 +130,17 @@ a {
 						}
 					}
 
-					&--active {
+					&:hover {
 						ul {
 							display: flex;
+							&::before {
+								content: "";
+								width: 100%;
+								height: 100%;
+								position: absolute;
+								z-index: -12;
+								transform: translate(-2rem, -3rem);
+							}
 						}
 					}
 				}
@@ -153,6 +179,8 @@ a {
 	.body {
 		&__future {
 			color: $dark_blue;
+			overflow: hidden;
+
 			&-title {
 				margin-top: 16rem;
 				font-size: 3rem;
@@ -166,15 +194,28 @@ a {
 					width: 57%;
 					padding-left: 16rem;
 					padding-right: 13rem;
-					h3 {
-						font-size: 2rem;
-						font-weight: 600;
-					}
-					p {
-						margin-top: 3rem;
-						font-size: 1.4rem;
-						font-weight: 400;
-						margin-bottom: 8rem;
+					&-items {
+						h3 {
+							font-size: 2rem;
+							font-weight: 600;
+						}
+						p {
+							margin-top: 3rem;
+							font-size: 1.4rem;
+							font-weight: 400;
+							margin-bottom: 8rem;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							display: -webkit-box;
+							-webkit-box-orient: vertical;
+
+							@include desktop {
+								-webkit-line-clamp: 8;
+							}
+							@include tablet {
+								-webkit-line-clamp: 4;
+							}
+						}
 					}
 				}
 				&--img {
@@ -215,6 +256,16 @@ a {
 					font-size: 1.4rem;
 					font-weight: 300;
 					color: $low_white;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+
+					@include desktop {
+						-webkit-line-clamp: 6;
+					}
+					@include tablet {
+						-webkit-line-clamp: 5;
+					}
 				}
 			}
 		}
@@ -243,6 +294,16 @@ a {
 						font-size: 1.2rem;
 						font-weight: 400;
 						color: $dark_blue;
+						display: -webkit-box;
+						-webkit-box-orient: vertical;
+						overflow: hidden;
+
+						@include desktop {
+							-webkit-line-clamp: 6;
+						}
+						@include tablet {
+							-webkit-line-clamp: 5;
+						}
 					}
 					&:first-child {
 						margin-bottom: 7rem;
@@ -261,6 +322,10 @@ a {
 		border-radius: 0 8rem 0 0;
 		padding: 8rem 16rem 0 16rem;
 
+		@include tablet {
+			padding: 8rem 8rem 0 8rem;
+		}
+
 		&__col {
 			width: 25%;
 			ul {
@@ -275,6 +340,9 @@ a {
 					margin-bottom: 1rem;
 					&:first-child {
 						margin-top: 3.5rem;
+					}
+					&:hover {
+						text-decoration: underline;
 					}
 				}
 			}
