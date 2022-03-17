@@ -1,1 +1,1 @@
-"use strict";$(document).ready(function(){});
+"use strict";function triggerMenuMobile(e){e.classList.toggle("active"),document.querySelector(".header__navMenu_menu").classList.toggle("active")}function triggerListItems(e){e.path[1].classList.toggle("hide")}$(document).ready(function(){for(var e=document.querySelectorAll(".header__navMenu_menu-items > a"),t=0;t<e.length;t++)e[t].addEventListener("click",function(e){triggerListItems(e)})});

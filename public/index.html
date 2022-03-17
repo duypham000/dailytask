@@ -15,21 +15,27 @@
   </head>
   <body class="home-page">
     <div class="wrapper">
-      <header class="header"><img class="header__bgImg" src="/images/bg-pattern-intro-desktop.svg" alt="">
+      <header class="header">
+        <div class="header__bgImg"><img src="/images/bg-pattern-intro-desktop.svg" alt=""></div>
         <div class="header__navMenu"> <img src="/images/logo.svg" alt="" srcset="">
+          <svg class="ham" viewBox="0 0 100 100" width="80" onclick="triggerMenuMobile(this)">
+            <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+            <path class="line middle" d="m 30,50 h 40"></path>
+            <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+          </svg>
           <ul class="header__navMenu_menu"> 
-            <li class="header__navMenu_menu-items"><a href="#"> Product</a>
+            <li class="header__navMenu_menu-items hide"><a href="#"> Product</a>
               <ul><a href="#">lorem</a><a href="#">isum  </a><a href="#">prais  </a></ul>
             </li>
-            <li class="header__navMenu_menu-items"><a href="#">Company</a>
+            <li class="header__navMenu_menu-items hide"><a href="#">Company</a>
               <ul><a href="#">lorem</a><a href="#">isum  </a><a href="#">prais  </a></ul>
             </li>
-            <li class="header__navMenu_menu-items"><a href="#">Connect </a>
+            <li class="header__navMenu_menu-items hide"><a href="#">Connect </a>
               <ul><a href="#">lorem</a><a href="#">isum  </a><a href="#">prais  </a></ul>
             </li>
+            <div class="btn btn-rounded">Login </div>
+            <div class="btn btn-rounded btn-filled">Sign up</div>
           </ul>
-          <div class="btn btn-rounded">Login </div>
-          <div class="btn btn-rounded btn-filled">Sign up</div>
         </div>
         <div class="header__banner"> 
           <div class="header__banner-title">A modern publishing platform </div>

@@ -1,11 +1,20 @@
 $color_header: #ff856e;
 $red: #ff525c;
+$g_red: linear-gradient(
+	to right,
+	$color_header,
+	$color_header,
+	$red,
+	$red,
+	$red
+);
 $white: #fafafa;
 $low_white: #eaeaff;
 $black: #24242c;
 $dark_blue: #223d52;
 $dark_pur: #3a3b59;
 $gray: #bcbdc2;
+$light_gray: #efeff1;
 $pink: #ff7b86;
 
 a {
@@ -66,14 +75,7 @@ a {
 		overflow: hidden;
 		border-bottom-left-radius: 8rem;
 		position: relative;
-		background-image: linear-gradient(
-			to right,
-			$color_header,
-			$color_header,
-			$red,
-			$red,
-			$red
-		);
+		background-image: $g_red;
 
 		& > * {
 			z-index: 1;
@@ -81,7 +83,9 @@ a {
 		&__bgImg {
 			position: absolute;
 			z-index: 0;
-			transform: scale(2) translate(14%, -1%);
+			img {
+				transform: scale(2) translate(14%, -1%);
+			}
 		}
 		&__navMenu {
 			width: 77.2%;
@@ -94,12 +98,66 @@ a {
 			@include tablet {
 				width: 85%;
 			}
+			.ham {
+				display: none;
+			}
+			@include mobile {
+				width: 90%;
+				.ham {
+					display: block;
+					margin-left: auto;
+					cursor: pointer;
+					-webkit-tap-highlight-color: transparent;
+					transition: transform 400ms;
+					-moz-user-select: none;
+					-webkit-user-select: none;
+					-ms-user-select: none;
+					user-select: none;
+				}
+				.line {
+					fill: none;
+					transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+					stroke: $white;
+					stroke-width: 5.5;
+					stroke-linecap: round;
+				}
+				.ham {
+					.top {
+						stroke-dasharray: 40 160;
+					}
+					.middle {
+						stroke-dasharray: 40 142;
+						transform-origin: 50%;
+						transition: transform 400ms;
+					}
+					.bottom {
+						stroke-dasharray: 40 85;
+						transform-origin: 50%;
+						transition: transform 400ms, stroke-dashoffset 400ms;
+					}
+				}
+
+				.ham.active {
+					transform: rotate(45deg);
+					.top {
+						stroke-dashoffset: -64px;
+					}
+					.middle {
+						//stroke-dashoffset: -20px;
+						transform: rotate(90deg);
+					}
+					.bottom {
+						stroke-dashoffset: -64px;
+					}
+				}
+			}
 
 			&_menu {
 				@include flex();
 				margin: 0;
 				padding: 0;
 				margin-left: 6rem;
+				width: 100%;
 				height: 100%;
 
 				&-items {
@@ -144,16 +202,99 @@ a {
 						}
 					}
 				}
+
+				& > .btn:nth-child(4) {
+					margin-left: auto;
+				}
+
+				@include mobile {
+					position: absolute;
+					overflow: scroll;
+					background-color: $white;
+					@include flex(center, flex-start, column);
+					display: none;
+					margin: 0;
+					width: 90%;
+					border-radius: 1rem;
+					max-height: 49rem;
+					height: auto;
+					overflow-y: scroll;
+					left: 50%;
+					transform: translate(-50%, calc(50% + 5rem));
+					padding: 3rem 2rem 3rem 2rem;
+					font-size: 2rem;
+					font-weight: 600;
+
+					&-items {
+						margin: 0 0 2rem 0;
+						width: 80%;
+						@include flex(center, center, column);
+						& > a {
+							color: $dark_blue;
+						}
+
+						& > ul {
+							@include flex(center, center, column);
+							display: flex;
+							position: relative;
+							background-color: $light_gray;
+							width: 100%;
+							transform: none;
+
+							& > a {
+								font-size: 1.8rem;
+								font-weight: 600;
+								width: fit-content;
+								margin-bottom: 1.5rem;
+							}
+						}
+						&.hide {
+							height: auto;
+							> ul {
+								height: 0;
+								overflow: hidden;
+								padding: 0;
+								margin: 0;
+							}
+						}
+					}
+					& > .btn:first-of-type {
+						font-size: 2rem;
+						color: $black;
+						font-weight: 600;
+						margin: 0;
+						margin-top: 4rem;
+						&::before {
+							content: "";
+							width: 80%;
+							border: 1px solid $light_gray;
+							position: absolute;
+							transform: translate(-50%, -4rem);
+							left: 50%;
+						}
+					}
+
+					& > .btn:last-of-type {
+						background: $g_red;
+						color: $white;
+						font-size: 2rem;
+						font-weight: 600;
+						padding: 1rem 3.5rem;
+					}
+				}
 			}
 
-			> .btn:nth-child(3) {
-				margin-left: auto;
+			@include mobile {
+				&_menu.active {
+					display: flex;
+				}
 			}
 		}
 
 		&__banner {
 			margin-top: 13rem;
 			color: $white;
+			z-index: 0;
 			&-title {
 				font-weight: 600;
 				font-size: 4.5rem;
@@ -179,6 +320,7 @@ a {
 	.body {
 		&__future {
 			color: $dark_blue;
+			background-color: $white;
 			overflow: hidden;
 
 			&-title {
