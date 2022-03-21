@@ -102,6 +102,7 @@ a {
 				display: none;
 			}
 			@include mobile {
+				margin-top: 3rem;
 				width: 90%;
 				.ham {
 					display: block;
@@ -308,11 +309,25 @@ a {
 			}
 			&-option {
 				@include flex(center, center);
-
+				flex-wrap: nowrap;
 				margin-top: 5.5rem;
 
 				> .btn {
 					margin: 0 0.75rem 15rem 0.75rem;
+				}
+			}
+
+			@include mobile {
+				&-title {
+					max-width: 43rem;
+					text-align: center;
+					margin: auto;
+				}
+				&-desc {
+					max-width: 43rem;
+					text-align: center;
+					margin-left: auto;
+					margin-right: auto;
 				}
 			}
 		}
@@ -365,6 +380,36 @@ a {
 					transform: scale(2) translate(15%);
 				}
 			}
+
+			@include mobile {
+				&-title {
+					font-size: 3.5rem;
+					font-weight: 700;
+				}
+				&-ctn {
+					@include flex(center, center, column-reverse);
+					&--img {
+						width: 70%;
+						margin: 25% auto 5% auto;
+						transform: scale(1.5);
+						img {
+							width: 100%;
+							content: url("/images/illustration-editor-mobile.svg");
+						}
+					}
+					&--desc {
+						width: auto;
+						padding: 0 15%;
+						h3 {
+							font-size: 2.5rem;
+							text-align: center;
+						}
+						p {
+							text-align: center;
+						}
+					}
+				}
+			}
 		}
 
 		&__state {
@@ -377,7 +422,7 @@ a {
 			background-image: url("/images/bg-pattern-circles.svg");
 			background-repeat: no-repeat;
 			background-size: 70%;
-			background-position: -20rem -50rem;
+			background-position: 0rem 0rem;
 			&-img,
 			&-body {
 				width: calc(50% - 2rem);
@@ -407,6 +452,38 @@ a {
 					}
 					@include tablet {
 						-webkit-line-clamp: 5;
+					}
+				}
+			}
+			@include mobile {
+				@include flex(center, center, column);
+				width: 100%;
+				padding: 0;
+				height: 65rem;
+				margin-top: 50%;
+				background-size: 100%;
+				background-position-y: -20rem;
+				&-img {
+					width: 100%;
+					transform: none;
+					top: -18rem;
+					position: relative;
+					& > img {
+						width: 100%;
+					}
+				}
+				&-body {
+					width: 80%;
+					position: relative;
+					top: -35%;
+					h3 {
+						font-size: 3rem;
+						font-weight: 700;
+						text-align: center;
+					}
+					p {
+						text-align: center;
+						font-size: 1.5rem;
 					}
 				}
 			}
@@ -452,6 +529,30 @@ a {
 					}
 				}
 			}
+			@include mobile {
+				@include flex(center, center, column);
+				padding: 0;
+
+				&-img {
+					width: 100%;
+					img {
+						@include flex(center, center);
+						content: url("/images/illustration-laptop-mobile.svg");
+						left: 50%;
+						position: relative;
+						transform: translate(-50%, -20%) scale(1.2);
+						width: 100%;
+					}
+				}
+				&-ctn {
+					width: 100%;
+					@include flex(center, center, column);
+					&--prg {
+						text-align: center;
+						width: 80%;
+					}
+				}
+			}
 		}
 	}
 
@@ -486,6 +587,32 @@ a {
 					&:hover {
 						text-decoration: underline;
 					}
+				}
+			}
+		}
+
+		@include mobile {
+			@include flex(center, center, column);
+			text-align: center;
+			height: auto;
+			padding: 0;
+			&__col {
+				width: 80%;
+				@include flex(center, center, column);
+				ul {
+					@include flex(center, center, column);
+					a {
+						&:first-child {
+							margin-top: 2rem;
+						}
+						&:last-child {
+							margin-bottom: 3rem;
+						}
+					}
+				}
+
+				&:first-child {
+					margin: 5rem 0 4rem 0;
 				}
 			}
 		}
